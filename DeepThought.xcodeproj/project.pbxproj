@@ -1,0 +1,636 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 47;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		551182641BA4AC1B00BD44CB /* TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182631BA4AC1B00BD44CB /* TVShows.swift */; settings = {ASSET_TAGS = (); }; };
+		551182661BA4B15000BD44CB /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182651BA4B15000BD44CB /* TVShowsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		551182681BA4BB3C00BD44CB /* TVShowsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182671BA4BB3C00BD44CB /* TVShowsInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		5545DA3F1BAEEF8F00A190A5 /* SocketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA3E1BAEEF8F00A190A5 /* SocketsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		5545DA411BAEEFDF00A190A5 /* SocketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA401BAEEFDF00A190A5 /* SocketsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		5545DA431BAEF0BE00A190A5 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA421BAEF0BE00A190A5 /* Sockets.swift */; settings = {ASSET_TAGS = (); }; };
+		555B76A31BA3742900554FDC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555B76A11BA3742900554FDC /* Interface.storyboard */; };
+		555B76A51BA3742900554FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555B76A41BA3742900554FDC /* Assets.xcassets */; };
+		555B76AC1BA3742900554FDC /* DeepThoughtWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 555B76AB1BA3742900554FDC /* DeepThoughtWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		555B76B31BA3742900554FDC /* WeatherInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B76B21BA3742900554FDC /* WeatherInterfaceController.swift */; };
+		555B76B51BA3742900554FDC /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B76B41BA3742900554FDC /* ExtensionDelegate.swift */; };
+		555B76B71BA3742900554FDC /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B76B61BA3742900554FDC /* NotificationController.swift */; };
+		555B76B91BA3742900554FDC /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B76B81BA3742900554FDC /* GlanceController.swift */; };
+		555B76BB1BA3742900554FDC /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555B76BA1BA3742900554FDC /* ComplicationController.swift */; };
+		555B76BD1BA3742900554FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555B76BC1BA3742900554FDC /* Assets.xcassets */; };
+		555B76C11BA3742900554FDC /* DeepThoughtWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 555B769F1BA3742900554FDC /* DeepThoughtWatch.app */; };
+		555C749D1B9E2CDA000CBFA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C749C1B9E2CDA000CBFA3 /* AppDelegate.swift */; };
+		555C749F1B9E2CDA000CBFA3 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C749E1B9E2CDA000CBFA3 /* WeatherViewController.swift */; };
+		555C74A41B9E2CDA000CBFA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C74A21B9E2CDA000CBFA3 /* Main.storyboard */; };
+		555C74A61B9E2CDB000CBFA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C74A51B9E2CDB000CBFA3 /* Assets.xcassets */; };
+		555C74A91B9E2CDB000CBFA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C74A71B9E2CDB000CBFA3 /* LaunchScreen.storyboard */; };
+		555C74B11B9E2D63000CBFA3 /* TVShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C74B01B9E2D63000CBFA3 /* TVShowsTableViewController.swift */; };
+		55E2DCD41BA5D41D0057005A /* TVShowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCD31BA5D41D0057005A /* TVShowRow.swift */; settings = {ASSET_TAGS = (); }; };
+		55E2DCDE1BA616BD0057005A /* AutomationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDD1BA616BD0057005A /* AutomationInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		55E2DCE01BA6187D0057005A /* AutomationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDF1BA6187D0057005A /* AutomationRow.swift */; settings = {ASSET_TAGS = (); }; };
+		55E2DCE21BA762150057005A /* MoviesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE11BA762150057005A /* MoviesInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
+		55E2DCE41BA762420057005A /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE31BA762420057005A /* MovieRow.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		555B76AD1BA3742900554FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 555C74911B9E2CDA000CBFA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 555B76AA1BA3742900554FDC;
+			remoteInfo = "DeepThoughtWatch Extension";
+		};
+		555B76BF1BA3742900554FDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 555C74911B9E2CDA000CBFA3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 555B769E1BA3742900554FDC;
+			remoteInfo = DeepThoughtWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		555B76C51BA3742900554FDC /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				555B76AC1BA3742900554FDC /* DeepThoughtWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555B76C91BA3742900554FDC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				555B76C11BA3742900554FDC /* DeepThoughtWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		551182631BA4AC1B00BD44CB /* TVShows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShows.swift; sourceTree = "<group>"; };
+		551182651BA4B15000BD44CB /* TVShowsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVShowsTableViewCell.swift; path = ../TVShowsTableViewCell.swift; sourceTree = "<group>"; };
+		551182671BA4BB3C00BD44CB /* TVShowsInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsInterfaceController.swift; sourceTree = "<group>"; };
+		5545DA3E1BAEEF8F00A190A5 /* SocketsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketsTableViewController.swift; sourceTree = "<group>"; };
+		5545DA401BAEEFDF00A190A5 /* SocketsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketsTableViewCell.swift; sourceTree = "<group>"; };
+		5545DA421BAEF0BE00A190A5 /* Sockets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sockets.swift; sourceTree = "<group>"; };
+		555B769F1BA3742900554FDC /* DeepThoughtWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepThoughtWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		555B76A21BA3742900554FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		555B76A41BA3742900554FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		555B76A61BA3742900554FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555B76AB1BA3742900554FDC /* DeepThoughtWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DeepThoughtWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		555B76B11BA3742900554FDC /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		555B76B21BA3742900554FDC /* WeatherInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInterfaceController.swift; sourceTree = "<group>"; };
+		555B76B41BA3742900554FDC /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		555B76B61BA3742900554FDC /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		555B76B81BA3742900554FDC /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		555B76BA1BA3742900554FDC /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		555B76BC1BA3742900554FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		555B76BE1BA3742900554FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555C74991B9E2CDA000CBFA3 /* DeepThought.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepThought.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		555C749C1B9E2CDA000CBFA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		555C749E1B9E2CDA000CBFA3 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		555C74A31B9E2CDA000CBFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		555C74A51B9E2CDB000CBFA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		555C74A81B9E2CDB000CBFA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		555C74AA1B9E2CDB000CBFA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		555C74B01B9E2D63000CBFA3 /* TVShowsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowsTableViewController.swift; sourceTree = "<group>"; };
+		55E2DCD31BA5D41D0057005A /* TVShowRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVShowRow.swift; sourceTree = "<group>"; };
+		55E2DCDD1BA616BD0057005A /* AutomationInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationInterfaceController.swift; sourceTree = "<group>"; };
+		55E2DCDF1BA6187D0057005A /* AutomationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomationRow.swift; sourceTree = "<group>"; };
+		55E2DCE11BA762150057005A /* MoviesInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesInterfaceController.swift; sourceTree = "<group>"; };
+		55E2DCE31BA762420057005A /* MovieRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		555B76A81BA3742900554FDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555C74961B9E2CDA000CBFA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		555B76A01BA3742900554FDC /* DeepThoughtWatch */ = {
+			isa = PBXGroup;
+			children = (
+				555B76A11BA3742900554FDC /* Interface.storyboard */,
+				555B76A41BA3742900554FDC /* Assets.xcassets */,
+				555B76A61BA3742900554FDC /* Info.plist */,
+			);
+			path = DeepThoughtWatch;
+			sourceTree = "<group>";
+		};
+		555B76AF1BA3742900554FDC /* DeepThoughtWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				555B76B21BA3742900554FDC /* WeatherInterfaceController.swift */,
+				55E2DCDD1BA616BD0057005A /* AutomationInterfaceController.swift */,
+				55E2DCDF1BA6187D0057005A /* AutomationRow.swift */,
+				551182671BA4BB3C00BD44CB /* TVShowsInterfaceController.swift */,
+				55E2DCD31BA5D41D0057005A /* TVShowRow.swift */,
+				55E2DCE11BA762150057005A /* MoviesInterfaceController.swift */,
+				55E2DCE31BA762420057005A /* MovieRow.swift */,
+				555B76B41BA3742900554FDC /* ExtensionDelegate.swift */,
+				555B76B61BA3742900554FDC /* NotificationController.swift */,
+				555B76B81BA3742900554FDC /* GlanceController.swift */,
+				555B76BA1BA3742900554FDC /* ComplicationController.swift */,
+				555B76BC1BA3742900554FDC /* Assets.xcassets */,
+				555B76BE1BA3742900554FDC /* Info.plist */,
+				555B76B01BA3742900554FDC /* Supporting Files */,
+			);
+			path = "DeepThoughtWatch Extension";
+			sourceTree = "<group>";
+		};
+		555B76B01BA3742900554FDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				555B76B11BA3742900554FDC /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		555C74901B9E2CDA000CBFA3 = {
+			isa = PBXGroup;
+			children = (
+				555C749B1B9E2CDA000CBFA3 /* DeepThought */,
+				555B76A01BA3742900554FDC /* DeepThoughtWatch */,
+				555B76AF1BA3742900554FDC /* DeepThoughtWatch Extension */,
+				555C749A1B9E2CDA000CBFA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		555C749A1B9E2CDA000CBFA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				555C74991B9E2CDA000CBFA3 /* DeepThought.app */,
+				555B769F1BA3742900554FDC /* DeepThoughtWatch.app */,
+				555B76AB1BA3742900554FDC /* DeepThoughtWatch Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		555C749B1B9E2CDA000CBFA3 /* DeepThought */ = {
+			isa = PBXGroup;
+			children = (
+				555C749C1B9E2CDA000CBFA3 /* AppDelegate.swift */,
+				555C749E1B9E2CDA000CBFA3 /* WeatherViewController.swift */,
+				5545DA3E1BAEEF8F00A190A5 /* SocketsTableViewController.swift */,
+				5545DA401BAEEFDF00A190A5 /* SocketsTableViewCell.swift */,
+				5545DA421BAEF0BE00A190A5 /* Sockets.swift */,
+				555C74B01B9E2D63000CBFA3 /* TVShowsTableViewController.swift */,
+				551182651BA4B15000BD44CB /* TVShowsTableViewCell.swift */,
+				551182631BA4AC1B00BD44CB /* TVShows.swift */,
+				555C74A21B9E2CDA000CBFA3 /* Main.storyboard */,
+				555C74A51B9E2CDB000CBFA3 /* Assets.xcassets */,
+				555C74A71B9E2CDB000CBFA3 /* LaunchScreen.storyboard */,
+				555C74AA1B9E2CDB000CBFA3 /* Info.plist */,
+			);
+			path = DeepThought;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		555B769E1BA3742900554FDC /* DeepThoughtWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555B76C61BA3742900554FDC /* Build configuration list for PBXNativeTarget "DeepThoughtWatch" */;
+			buildPhases = (
+				555B769D1BA3742900554FDC /* Resources */,
+				555B76C51BA3742900554FDC /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				555B76AE1BA3742900554FDC /* PBXTargetDependency */,
+			);
+			name = DeepThoughtWatch;
+			productName = DeepThoughtWatch;
+			productReference = 555B769F1BA3742900554FDC /* DeepThoughtWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		555B76AA1BA3742900554FDC /* DeepThoughtWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555B76C21BA3742900554FDC /* Build configuration list for PBXNativeTarget "DeepThoughtWatch Extension" */;
+			buildPhases = (
+				555B76A71BA3742900554FDC /* Sources */,
+				555B76A81BA3742900554FDC /* Frameworks */,
+				555B76A91BA3742900554FDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DeepThoughtWatch Extension";
+			productName = "DeepThoughtWatch Extension";
+			productReference = 555B76AB1BA3742900554FDC /* DeepThoughtWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		555C74981B9E2CDA000CBFA3 /* DeepThought */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 555C74AD1B9E2CDB000CBFA3 /* Build configuration list for PBXNativeTarget "DeepThought" */;
+			buildPhases = (
+				555C74951B9E2CDA000CBFA3 /* Sources */,
+				555C74961B9E2CDA000CBFA3 /* Frameworks */,
+				555C74971B9E2CDA000CBFA3 /* Resources */,
+				555B76C91BA3742900554FDC /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				555B76C01BA3742900554FDC /* PBXTargetDependency */,
+			);
+			name = DeepThought;
+			productName = DeepThought;
+			productReference = 555C74991B9E2CDA000CBFA3 /* DeepThought.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		555C74911B9E2CDA000CBFA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Dave Walls";
+				TargetAttributes = {
+					555B769E1BA3742900554FDC = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = YRHJBASX44;
+					};
+					555B76AA1BA3742900554FDC = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = YRHJBASX44;
+					};
+					555C74981B9E2CDA000CBFA3 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 555C74941B9E2CDA000CBFA3 /* Build configuration list for PBXProject "DeepThought" */;
+			compatibilityVersion = "Xcode 6.3";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 555C74901B9E2CDA000CBFA3;
+			productRefGroup = 555C749A1B9E2CDA000CBFA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				555C74981B9E2CDA000CBFA3 /* DeepThought */,
+				555B769E1BA3742900554FDC /* DeepThoughtWatch */,
+				555B76AA1BA3742900554FDC /* DeepThoughtWatch Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		555B769D1BA3742900554FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555B76A51BA3742900554FDC /* Assets.xcassets in Resources */,
+				555B76A31BA3742900554FDC /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555B76A91BA3742900554FDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555B76BD1BA3742900554FDC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555C74971B9E2CDA000CBFA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555C74A91B9E2CDB000CBFA3 /* LaunchScreen.storyboard in Resources */,
+				555C74A61B9E2CDB000CBFA3 /* Assets.xcassets in Resources */,
+				555C74A41B9E2CDA000CBFA3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		555B76A71BA3742900554FDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				555B76B71BA3742900554FDC /* NotificationController.swift in Sources */,
+				555B76B51BA3742900554FDC /* ExtensionDelegate.swift in Sources */,
+				55E2DCE21BA762150057005A /* MoviesInterfaceController.swift in Sources */,
+				555B76BB1BA3742900554FDC /* ComplicationController.swift in Sources */,
+				55E2DCE01BA6187D0057005A /* AutomationRow.swift in Sources */,
+				55E2DCE41BA762420057005A /* MovieRow.swift in Sources */,
+				555B76B31BA3742900554FDC /* WeatherInterfaceController.swift in Sources */,
+				55E2DCDE1BA616BD0057005A /* AutomationInterfaceController.swift in Sources */,
+				55E2DCD41BA5D41D0057005A /* TVShowRow.swift in Sources */,
+				551182681BA4BB3C00BD44CB /* TVShowsInterfaceController.swift in Sources */,
+				555B76B91BA3742900554FDC /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		555C74951B9E2CDA000CBFA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5545DA411BAEEFDF00A190A5 /* SocketsTableViewCell.swift in Sources */,
+				5545DA3F1BAEEF8F00A190A5 /* SocketsTableViewController.swift in Sources */,
+				555C74B11B9E2D63000CBFA3 /* TVShowsTableViewController.swift in Sources */,
+				551182661BA4B15000BD44CB /* TVShowsTableViewCell.swift in Sources */,
+				5545DA431BAEF0BE00A190A5 /* Sockets.swift in Sources */,
+				555C749D1B9E2CDA000CBFA3 /* AppDelegate.swift in Sources */,
+				551182641BA4AC1B00BD44CB /* TVShows.swift in Sources */,
+				555C749F1B9E2CDA000CBFA3 /* WeatherViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		555B76AE1BA3742900554FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 555B76AA1BA3742900554FDC /* DeepThoughtWatch Extension */;
+			targetProxy = 555B76AD1BA3742900554FDC /* PBXContainerItemProxy */;
+		};
+		555B76C01BA3742900554FDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 555B769E1BA3742900554FDC /* DeepThoughtWatch */;
+			targetProxy = 555B76BF1BA3742900554FDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		555B76A11BA3742900554FDC /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				555B76A21BA3742900554FDC /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		555C74A21B9E2CDA000CBFA3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				555C74A31B9E2CDA000CBFA3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		555C74A71B9E2CDB000CBFA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				555C74A81B9E2CDB000CBFA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		555B76C31BA3742900554FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "DeepThoughtWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos2.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		555B76C41BA3742900554FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "DeepThoughtWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos2.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		555B76C71BA3742900554FDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DeepThoughtWatch_Extension;
+				INFOPLIST_FILE = DeepThoughtWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos2.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		555B76C81BA3742900554FDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = DeepThoughtWatch_Extension;
+				INFOPLIST_FILE = DeepThoughtWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos2.0;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		555C74AB1B9E2CDB000CBFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos9.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		555C74AC1B9E2CDB000CBFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos9.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		555C74AE1B9E2CDB000CBFA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepThought/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		555C74AF1B9E2CDB000CBFA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DeepThought/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		555B76C21BA3742900554FDC /* Build configuration list for PBXNativeTarget "DeepThoughtWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555B76C31BA3742900554FDC /* Debug */,
+				555B76C41BA3742900554FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555B76C61BA3742900554FDC /* Build configuration list for PBXNativeTarget "DeepThoughtWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555B76C71BA3742900554FDC /* Debug */,
+				555B76C81BA3742900554FDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555C74941B9E2CDA000CBFA3 /* Build configuration list for PBXProject "DeepThought" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555C74AB1B9E2CDB000CBFA3 /* Debug */,
+				555C74AC1B9E2CDB000CBFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		555C74AD1B9E2CDB000CBFA3 /* Build configuration list for PBXNativeTarget "DeepThought" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				555C74AE1B9E2CDB000CBFA3 /* Debug */,
+				555C74AF1B9E2CDB000CBFA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 555C74911B9E2CDA000CBFA3 /* Project object */;
+}

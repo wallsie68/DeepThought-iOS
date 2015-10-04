@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="temperature" title="Temperature" id="AgC-eL-Hgc" customClass="WeatherInterfaceController" customModule="DeepThoughtWatch_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Temperature" textAlignment="center" id="5D9-Iw-Q0s">
+                            <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="at Home" textAlignment="center" id="ajQ-f0-230">
+                            <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="Temperature" textAlignment="center" baselineAdjustment="alignCenters" id="oPg-z3-zG9" userLabel="temp">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="TemperatureWKInterfaceLabel" destination="oPg-z3-zG9" id="mUq-Sd-lg2"/>
+                        <segue destination="iR9-am-M7f" kind="relationship" relationship="nextPage" id="yvA-sA-CJO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--TV Shows-->
+        <scene sceneID="0vt-eT-7lD">
+            <objects>
+                <controller identifier="tvshows" title="TV Shows" hidesWhenLoading="NO" id="14c-bc-AJ3" customClass="TVShowsInterfaceController" customModule="DeepThoughtWatch_Extension">
+                    <items>
+                        <table alignment="left" id="Bwe-Ne-tsb" userLabel="TVShow Table">
+                            <items>
+                                <tableRow identifier="TVShowRow" id="7Oz-Fn-lIn" userLabel="TVShowRow" customClass="TVShowRow" customModule="DeepThoughtWatch_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="TES-bM-eoQ">
+                                        <items>
+                                            <label alignment="left" text="Episode" textAlignment="left" numberOfLines="2" minimumScaleFactor="0.5" id="1bI-SR-Kbr">
+                                                <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                            </label>
+                                            <label alignment="left" text="Label" textAlignment="left" numberOfLines="2" minimumScaleFactor="0.5" id="mHL-SG-Xhy">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="episodeLabel" destination="1bI-SR-Kbr" id="6zV-jU-2Bo"/>
+                                        <outlet property="showLabel" destination="mHL-SG-Xhy" id="PSU-mg-uj9"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="TVShowTable" destination="Bwe-Ne-tsb" id="4Ga-Wh-5kk"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="899" y="347"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="uBT-cg-7tF">
+            <objects>
+                <controller identifier="movies" title="Movies" hidesWhenLoading="NO" id="Y4j-FU-V0e" customClass="MoviesInterfaceController" customModule="DeepThoughtWatch_Extension">
+                    <items>
+                        <table alignment="left" id="n6k-Pf-MBo" userLabel="Movie Table">
+                            <items>
+                                <tableRow identifier="MovieRow" id="5sM-L4-9Or" userLabel="MovieRow" customClass="MovieRow" customModule="DeepThoughtWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="CJf-63-CbZ">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Movie" numberOfLines="2" id="KT4-Dv-kEB">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="movieLabel" destination="KT4-Dv-kEB" id="8vL-Yz-ZN2"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="MoviesTable" destination="n6k-Pf-MBo" id="Js6-AW-cVg"/>
+                        <segue destination="14c-bc-AJ3" kind="relationship" relationship="nextPage" id="QZc-fk-XBR"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="677" y="347"/>
+        </scene>
+        <!--Automation-->
+        <scene sceneID="rbX-MH-q76">
+            <objects>
+                <controller identifier="automation" title="Automation" hidesWhenLoading="NO" id="iR9-am-M7f" customClass="AutomationInterfaceController" customModule="DeepThoughtWatch_Extension">
+                    <items>
+                        <table alignment="left" id="USG-K9-VeN" userLabel="Automation Table">
+                            <items>
+                                <tableRow identifier="AutomationRow" id="1oJ-4F-uvZ" userLabel="AutomationRow" customClass="AutomationRow" customModule="DeepThoughtWatch_Extension">
+                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="5WN-Me-DEa">
+                                        <items>
+                                            <switch width="1" alignment="left" value="YES" title="Socket" numberOfLines="2" id="vpN-2l-a9b">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                <connections>
+                                                    <action selector="socketAction:" destination="1oJ-4F-uvZ" id="4Lu-s0-yF5"/>
+                                                </connections>
+                                            </switch>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="socketSwitch" destination="vpN-2l-a9b" id="8pR-SD-MC3"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="AutomationTable" destination="USG-K9-VeN" id="xdM-3x-Ib8"/>
+                        <segue destination="Y4j-FU-V0e" kind="relationship" relationship="nextPage" id="fK9-Eq-FVA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="461" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" topTemplateType="body3" bottomTemplateType="extraLargeExtraLargeFooter" id="0uZ-2p-rRc" customClass="GlanceController" customModule="DeepThoughtWatch" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Temperature at Home" id="wJO-14-lBV">
+                            <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <label alignment="left" text="NN" minimumScaleFactor="0.5" id="7VM-z0-Zqc"/>
+                        <label alignment="left" text="MM" minimumScaleFactor="0.5" id="Szw-Kl-I8X"/>
+                        <label alignment="left" text="DeepThought Weather Station" id="4Kh-ce-ZF6"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="TemperatureWKInterfaceLabel" destination="7VM-z0-Zqc" id="s4D-7o-vZO"/>
+                        <outlet property="TemperatureWKInterfaceLabel2" destination="Szw-Kl-I8X" id="gka-lA-oQG"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController" customModule="DeepThoughtWatch" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
