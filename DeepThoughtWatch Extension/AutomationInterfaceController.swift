@@ -48,12 +48,7 @@ class AutomationInterfaceController: WKInterfaceController {
 
     // MARK: Functions
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-        
-    }
+
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -62,16 +57,16 @@ class AutomationInterfaceController: WKInterfaceController {
         sockets.removeAll()
         
         let url = NSURL(string:"http://DeepThought.local/automation/socketList.php")!
-        let conf = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: conf)
-        let task = session.dataTaskWithURL(url) { (data, res, error) -> Void in
-            if let e = error {
-                print("dataTaskWithURL fail: \(e.debugDescription)")
+        let conf = URLSessionConfiguration.default
+        let session = URLSession(configuration: conf)
+        let task = session.dataTask(with: url as URL) { (data, res, error) -> Void in
+            if error != nil {
+                print("dataTask fail: \(error))")
                 return
             }
             
             do {
-                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
                 
                 let sockets = jsonData["sockets"] as! [[String : AnyObject]]
                 
@@ -92,13 +87,13 @@ class AutomationInterfaceController: WKInterfaceController {
                 print("json error: \(error.localizedDescription)")
             }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async( execute: { () -> Void in
         
                 self.AutomationTable.setNumberOfRows(self.sockets.count, withRowType: "AutomationRow")
         
                 var i = 0
                 for socket in self.sockets {
-                    let row = self.AutomationTable.rowControllerAtIndex(i) as? AutomationRow
+                    let row = self.AutomationTable.rowController(at: i) as? AutomationRow
                     row!.socketSwitch.setTitle(socket.socket)
                     row!.socketSwitch.setOn(socket.status)
                     row!.name = socket.socket

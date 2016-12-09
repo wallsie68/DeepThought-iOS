@@ -1,3 +1,4 @@
+
 //
 //  MoviesInterfaceController.swift
 //  DeepThought
@@ -42,8 +43,8 @@ class MoviesInterfaceController: WKInterfaceController {
     
     // MARK: Functions
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    override func awake(withContext context: Any?) {
+        super.awake(withContext: context)
         
         // Configure interface objects here.
     }
@@ -55,16 +56,16 @@ class MoviesInterfaceController: WKInterfaceController {
         movies.removeAll()
 
         let url = NSURL(string:"http://10.0.1.4/entertainment/movieJSON.php")!
-        let conf = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: conf)
-        let task = session.dataTaskWithURL(url) { (data, res, error) -> Void in
-            if let e = error {
-                print("dataTaskWithURL fail: \(e.debugDescription)")
+        let conf = URLSessionConfiguration.default
+        let session = URLSession(configuration: conf)
+        let task = session.dataTask(with: url as URL) { (data, res, error) -> Void in
+            if (error != nil) {
+                print("dataTask fail: \(error)")
                 return
             }
             
             do {
-                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
 
                 let movies = jsonData["movies"] as! [[String : AnyObject]]
                 
@@ -79,13 +80,13 @@ class MoviesInterfaceController: WKInterfaceController {
                 print("json error: \(error.localizedDescription)")
             }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
+//            DispatchQueue.main.asynchronously(execute: { () -> Void in
+              DispatchQueue.main.async( execute: { () -> Void in
                 self.MoviesTable.setNumberOfRows(self.movies.count, withRowType: "MovieRow")
                 
                 var i = 0
                 for movie in self.movies {
-                    let row = self.MoviesTable.rowControllerAtIndex(i) as? MovieRow
+                    let row = self.MoviesTable.rowController(at: i) as? MovieRow
                     row!.movieLabel.setText(movie.movie)
                     i = i + 1
                 }

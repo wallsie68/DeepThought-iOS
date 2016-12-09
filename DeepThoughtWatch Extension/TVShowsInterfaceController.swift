@@ -45,11 +45,7 @@ class TVShowsInterfaceController: WKInterfaceController {
     
     // MARK: Functions
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here
-    }
+
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
@@ -58,16 +54,16 @@ class TVShowsInterfaceController: WKInterfaceController {
         tvshows.removeAll()
         
         let url = NSURL(string:"http://10.0.1.4/entertainment/tvJSON.php")!
-        let conf = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: conf)
-        let task = session.dataTaskWithURL(url) { (data, res, error) -> Void in
-            if let e = error {
-                print("dataTaskWithURL fail: \(e.debugDescription)")
+        let conf = URLSessionConfiguration.default
+        let session = URLSession(configuration: conf)
+        let task = session.dataTask(with: url as URL) { (data, res, error) -> Void in
+            if error != nil {
+                print("dataTask fail: \(error)")
                 return
             }
             
             do {
-                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
                 
                 let tvshows = jsonData["tvshows"] as! [[String : AnyObject]]
                 
@@ -84,13 +80,13 @@ class TVShowsInterfaceController: WKInterfaceController {
                 print("json error: \(error.localizedDescription)")
             }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async( execute: { () -> Void in
                 
                 self.TVShowTable.setNumberOfRows(self.tvshows.count, withRowType: "TVShowRow")
                 
                 var i = 0
                 for tvshow in self.tvshows {
-                    let row = self.TVShowTable.rowControllerAtIndex(i) as? TVShowRow
+                    let row = self.TVShowTable.rowController(at: i) as? TVShowRow
                     row!.episodeLabel.setText(tvshow.episode)
                     row!.showLabel.setText(tvshow.show)
                     i = i + 1

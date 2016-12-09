@@ -22,15 +22,15 @@ class SocketsTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
 
-    @IBAction func socketSwitchAction(sender: UISwitch) {
+    @IBAction func socketSwitchAction(_ sender: UISwitch) {
         
-        let value: Bool = sender.on
+        let value: Bool = sender.isOn
         
         print("Switch \(name) - \(on) - \(off) - \(value)")
         
@@ -42,7 +42,7 @@ class SocketsTableViewCell: UITableViewCell {
             jsonUrl = "http://DeepThought.local/automation/power.php?e=" + off
         }
         
-        let nsUrl = NSURL(string: jsonUrl)
+        let nsUrl = URL(string: jsonUrl)
         
         // Synchronous
 
@@ -56,8 +56,8 @@ class SocketsTableViewCell: UITableViewCell {
 
         // Asynchronous
         
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(nsUrl!, completionHandler: {data, response, error -> Void in
+        let session = URLSession.shared
+        let task = session.dataTask(with: nsUrl!, completionHandler: {data, response, error -> Void in
             if(error != nil) {
                 // If there is an error in the web request, print it to the console
                 print(error!.localizedDescription)

@@ -1,3 +1,4 @@
+
 //
 //  InterfaceController.swift
 //  DeepThoughtWatch Extension
@@ -14,32 +15,34 @@ class WeatherInterfaceController: WKInterfaceController {
     
     @IBOutlet var TemperatureWKInterfaceLabel: WKInterfaceLabel!
     
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-        
-    }
+
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        let url = NSURL(string:"http://thingspeak.com/channels/22830/feed.json?key=09IMPB7648R7T8AQ&&results=1")!
-        let conf = NSURLSessionConfiguration.defaultSessionConfiguration()
-        let session = NSURLSession(configuration: conf)
-        let task = session.dataTaskWithURL(url) { (data, res, error) -> Void in
-            if let e = error {
-                print("dataTaskWithURL fail: \(e.debugDescription)")
+        let url = NSURL(string:"https://thingspeak.com/channels/22830/feed.json?key=09IMPB7648R7T8AQ&&results=1")!
+        let conf = URLSessionConfiguration.default
+        let session = URLSession(configuration: conf)
+        let task = session.dataTask(with: url as URL) { (data, res, error) -> Void in
+            if error != nil {
+                print("dataTask fail: \(error)")
                 return
             }
             
-            print("\(data!)")
+//            print("\(data!)")
+
+            let jsonText = NSString(data: data!,
+                encoding: String.Encoding.ascii.rawValue)
+            
+            print("\(jsonText!)")
+            
+            let json: NSData? = jsonText!.data(using: String.Encoding.utf8.rawValue)! as NSData?
             
             do {
-                let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers) as! NSDictionary
+                let jsonData = try JSONSerialization.jsonObject(with: json! as Data, options:JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
                 
-                print("\(jsonData)")
+//                print("\(jsonData)")
                 
                 let vals = jsonData["feeds"] as! [[String : AnyObject]]
                 
@@ -54,7 +57,7 @@ class WeatherInterfaceController: WKInterfaceController {
                 self.temp = "Error"
             }
             
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            DispatchQueue.main.async( execute: { () -> Void in
                 
                 self.TemperatureWKInterfaceLabel.setText(self.temp)
                 

@@ -17,10 +17,10 @@ class SocketsTableViewController: UITableViewController {
         
         let jsonUrl = "http://DeepThought.local/automation/socketList.php"
         
-        let nsUrl = NSURL(string: jsonUrl)
-        let data = NSData(contentsOfURL: nsUrl!)
+        let nsUrl = URL(string: jsonUrl)
+        let data = try? Data(contentsOf: nsUrl!)
         do {
-            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+            let jsonData = try JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
             
             let sockets = jsonData["sockets"] as! [[String : AnyObject]]
             
@@ -64,20 +64,20 @@ class SocketsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return sockets.count
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         let cellIdentifier = "SocketsTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SocketsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SocketsTableViewCell
         
         // Configure the cell...
         

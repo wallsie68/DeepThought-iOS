@@ -20,10 +20,10 @@ class GlanceController: WKInterfaceController {
         let jsonUrl = "http://thingspeak.com/channels/22830/feed.json?key=09IMPB7648R7T8AQ&&results=1"
         
         let nsUrl = NSURL(string: jsonUrl)
-        let data = NSData(contentsOfURL: nsUrl!)
+        let data = NSData(contentsOf: nsUrl! as URL)
         
         do {
-            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+            let jsonData = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
             
             let vals = jsonData["feeds"] as! [[String : AnyObject]]
             
@@ -43,10 +43,10 @@ class GlanceController: WKInterfaceController {
         let jsonUrl = "http://api.openweathermap.org/data/2.5/weather?q=wendover,uk"
         
         let nsUrl = NSURL(string: jsonUrl)
-        let data = NSData(contentsOfURL: nsUrl!)
+        let data = NSData(contentsOf: nsUrl! as URL)
         
         do {
-            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+            let jsonData = try JSONSerialization.jsonObject(with: data! as Data, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
             
             let val = jsonData["main"] as! NSDictionary
             
@@ -63,13 +63,6 @@ class GlanceController: WKInterfaceController {
         }
     }
     
-    
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
-        
-        // Configure interface objects here.
-        
-    }
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user

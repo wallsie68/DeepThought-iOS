@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		551182641BA4AC1B00BD44CB /* TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182631BA4AC1B00BD44CB /* TVShows.swift */; settings = {ASSET_TAGS = (); }; };
-		551182661BA4B15000BD44CB /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182651BA4B15000BD44CB /* TVShowsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		551182681BA4BB3C00BD44CB /* TVShowsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182671BA4BB3C00BD44CB /* TVShowsInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		5545DA3F1BAEEF8F00A190A5 /* SocketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA3E1BAEEF8F00A190A5 /* SocketsTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		5545DA411BAEEFDF00A190A5 /* SocketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA401BAEEFDF00A190A5 /* SocketsTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		5545DA431BAEF0BE00A190A5 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA421BAEF0BE00A190A5 /* Sockets.swift */; settings = {ASSET_TAGS = (); }; };
+		551182641BA4AC1B00BD44CB /* TVShows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182631BA4AC1B00BD44CB /* TVShows.swift */; };
+		551182661BA4B15000BD44CB /* TVShowsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182651BA4B15000BD44CB /* TVShowsTableViewCell.swift */; };
+		551182681BA4BB3C00BD44CB /* TVShowsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551182671BA4BB3C00BD44CB /* TVShowsInterfaceController.swift */; };
+		5545DA3F1BAEEF8F00A190A5 /* SocketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA3E1BAEEF8F00A190A5 /* SocketsTableViewController.swift */; };
+		5545DA411BAEEFDF00A190A5 /* SocketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA401BAEEFDF00A190A5 /* SocketsTableViewCell.swift */; };
+		5545DA431BAEF0BE00A190A5 /* Sockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5545DA421BAEF0BE00A190A5 /* Sockets.swift */; };
 		555B76A31BA3742900554FDC /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555B76A11BA3742900554FDC /* Interface.storyboard */; };
 		555B76A51BA3742900554FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555B76A41BA3742900554FDC /* Assets.xcassets */; };
 		555B76AC1BA3742900554FDC /* DeepThoughtWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 555B76AB1BA3742900554FDC /* DeepThoughtWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -29,11 +29,11 @@
 		555C74A61B9E2CDB000CBFA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555C74A51B9E2CDB000CBFA3 /* Assets.xcassets */; };
 		555C74A91B9E2CDB000CBFA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555C74A71B9E2CDB000CBFA3 /* LaunchScreen.storyboard */; };
 		555C74B11B9E2D63000CBFA3 /* TVShowsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555C74B01B9E2D63000CBFA3 /* TVShowsTableViewController.swift */; };
-		55E2DCD41BA5D41D0057005A /* TVShowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCD31BA5D41D0057005A /* TVShowRow.swift */; settings = {ASSET_TAGS = (); }; };
-		55E2DCDE1BA616BD0057005A /* AutomationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDD1BA616BD0057005A /* AutomationInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		55E2DCE01BA6187D0057005A /* AutomationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDF1BA6187D0057005A /* AutomationRow.swift */; settings = {ASSET_TAGS = (); }; };
-		55E2DCE21BA762150057005A /* MoviesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE11BA762150057005A /* MoviesInterfaceController.swift */; settings = {ASSET_TAGS = (); }; };
-		55E2DCE41BA762420057005A /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE31BA762420057005A /* MovieRow.swift */; settings = {ASSET_TAGS = (); }; };
+		55E2DCD41BA5D41D0057005A /* TVShowRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCD31BA5D41D0057005A /* TVShowRow.swift */; };
+		55E2DCDE1BA616BD0057005A /* AutomationInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDD1BA616BD0057005A /* AutomationInterfaceController.swift */; };
+		55E2DCE01BA6187D0057005A /* AutomationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCDF1BA6187D0057005A /* AutomationRow.swift */; };
+		55E2DCE21BA762150057005A /* MoviesInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE11BA762150057005A /* MoviesInterfaceController.swift */; };
+		55E2DCE41BA762420057005A /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E2DCE31BA762420057005A /* MovieRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -271,19 +271,23 @@
 		555C74911B9E2CDA000CBFA3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Dave Walls";
 				TargetAttributes = {
 					555B769E1BA3742900554FDC = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = YRHJBASX44;
+						LastSwiftMigration = 0810;
 					};
 					555B76AA1BA3742900554FDC = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = YRHJBASX44;
+						LastSwiftMigration = 0810;
 					};
 					555C74981B9E2CDA000CBFA3 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = YRHJBASX44;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -418,14 +422,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				INFOPLIST_FILE = "DeepThoughtWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos2.0;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Debug;
 		};
@@ -433,31 +440,36 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				INFOPLIST_FILE = "DeepThoughtWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos2.0;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
 			};
 			name = Release;
 		};
 		555B76C71BA3742900554FDC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				IBSC_MODULE = DeepThoughtWatch_Extension;
 				INFOPLIST_FILE = DeepThoughtWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos2.0;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -466,17 +478,19 @@
 		555B76C81BA3742900554FDC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				IBSC_MODULE = DeepThoughtWatch_Extension;
 				INFOPLIST_FILE = DeepThoughtWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SDKROOT = watchos2.0;
+				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
@@ -495,8 +509,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -518,10 +534,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -540,8 +556,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -557,9 +575,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos9.0;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -569,11 +588,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				INFOPLIST_FILE = DeepThought/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -582,11 +603,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YRHJBASX44;
 				INFOPLIST_FILE = DeepThought/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wallsie68.DeepThought;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

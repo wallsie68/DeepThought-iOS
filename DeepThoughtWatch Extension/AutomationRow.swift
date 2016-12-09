@@ -39,8 +39,8 @@ class AutomationRow: NSObject {
         
         // Asynchronous
         
-        let session = NSURLSession.sharedSession()
-        let task = session.dataTaskWithURL(nsUrl!, completionHandler: {data, response, error -> Void in
+        let session = URLSession.shared
+        let task = session.dataTask(with: nsUrl! as URL, completionHandler: {data, response, error -> Void in
             if(error != nil) {
                 // If there is an error in the web request, print it to the console
                 print(error!.localizedDescription)

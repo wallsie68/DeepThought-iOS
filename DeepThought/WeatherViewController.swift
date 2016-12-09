@@ -16,11 +16,11 @@ class WeatherViewController: UIViewController {
         
         let jsonUrl = "http://thingspeak.com/channels/22830/feed.json?key=09IMPB7648R7T8AQ&&results=1"
         
-        let nsUrl = NSURL(string: jsonUrl)
-        let data = NSData(contentsOfURL: nsUrl!)
+        let nsUrl = URL(string: jsonUrl)
+        let data = try? Data(contentsOf: nsUrl!)
         
         do {
-            let jsonData = try NSJSONSerialization.JSONObjectWithData(data!, options:NSJSONReadingOptions.MutableContainers ) as! NSDictionary
+            let jsonData = try JSONSerialization.jsonObject(with: data!, options:JSONSerialization.ReadingOptions.mutableContainers ) as! NSDictionary
             
             let vals = jsonData["feeds"] as! [[String : AnyObject]]
             
@@ -42,16 +42,16 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "applicationWillEnterForeground:", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(UIApplicationDelegate.applicationWillEnterForeground(_:)), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil)
 
         temperatureUILabel.text = loadWeather()
     }
 
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self)
+        NotificationCenter.default.removeObserver(self)
     }
 
-    func applicationWillEnterForeground(notification: NSNotification) {
+    func applicationWillEnterForeground(_ notification: Notification) {
         temperatureUILabel.text = loadWeather()
     }
 
